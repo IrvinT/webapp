@@ -1,12 +1,3 @@
-body,
-.container {
-
-	.well {
-		box-shadow: 0 0px 0px 0 rgba(0,0,0,.2),0 0px 3px 0 rgba(0,0,0,.19);
-		height: 2000px;
-	}
-}
-
 .base-container {
 	padding-top: 100px;
 }
@@ -20,4 +11,14 @@ body,
 .navbar.navbar,
 .navbar-material-brown.navbar {
   background-color: #856D4D;
+}
+
+.form-control:focus,
+.form-control.focus {
+  outline: none;
+  background-image: linear-gradient(#54442F, #54442F), linear-gradient(#d2d2d2, #d2d2d2);
+  -webkit-animation: input-highlight 0.5s forwards;
+          animation: input-highlight 0.5s forwards;
+  box-shadow: none;
+  background-size: 0 2px, 100% 1px;
 }

@@ -227,7 +227,6 @@ module.exports = function (grunt) {
     grunt.registerTask('serve', function (target) {
         grunt.task.run([
             'clean:serve',
-            'sprite',
             'sass',
             'autoprefixer',
             'connect:livereload',
@@ -238,7 +237,6 @@ module.exports = function (grunt) {
     grunt.registerTask('build', function (target) {
         grunt.task.run([
             'clean:dist',
-            'sprite',
             'concurrent:dist',
             'autoprefixer:serve',
             'autoprefixer:serve_modules',

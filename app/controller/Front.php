@@ -19,13 +19,16 @@ class Front {
 			$smarty->cache_dir = 'app/cache/';
 		});
 
+        $this->render->set('app.base_uri', 'app/');
+        $this->render->set('app.bower_uri', 'bower_components/');
+
         $this->render->view()->assign(array(
-            'path' => _BASE_URI_,
-            'bower_uri' => _BOWER_URI_
+            'path' => $this->render->get('app.base_uri'),
+            'bower_uri' => $this->render->get('app.bower_uri')
         ));
     }
 
-    public function home($params)
+    public function home()
     {
     	$this->render->view()->display('layout.tpl');
     }
