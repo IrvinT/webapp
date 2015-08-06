@@ -16,6 +16,11 @@
         <!--[if lt IE 9]>
             <script src="{$path}js/vendor/html5-3.6-respond-1.4.2.min.js"></script>
         <![endif]-->
+
+        <script type="text/javascript" src="{$bower_uri}jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="{$bower_uri}snackbarjs/dist/snackbar.min.js"></script>
+        <script type="text/javascript" src="{$path}js/global.js"></script>
+
     </head>
     <body>
 

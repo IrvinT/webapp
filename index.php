@@ -16,6 +16,21 @@ $app->route('/', function(){
 	$c->home();
 });
 
+$app->route('/accueil', function(){
+	$c = new Controller\Front();
+	$c->home();
+});
+
+$app->route('/ajouter-categories', function(){
+	$c = new Controller\Front();
+	$c->home();
+});
+
+$app->route('/ajouter-souscategories', function(){
+	$c = new Controller\Front();
+	$c->home();
+});
+
 $app->map('notFound', function(){
     include '404.html';
 });

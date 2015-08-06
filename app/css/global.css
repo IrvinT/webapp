@@ -1,6 +1,7 @@
 @import url(../../bower_components/bootstrap/dist/css/bootstrap.min.css);
-@import url(../../bower_components/bootstrap-material-design/dist/css/material.min.css);
+@import url(../../bower_components/bootstrap-material-design/dist/css/material-fullpalette.min.css);
 @import url(../../bower_components/bootstrap-material-design/dist/css/ripples.min.css);
+@import url(../../bower_components/snackbarjs/dist/snackbar.min.css);
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -345,8 +346,61 @@ td, th {
 
 .form-control:focus, .form-control.focus {
   outline: none;
-  background-image: linear-gradient(#54442F, #54442F), linear-gradient(#d2d2d2, #d2d2d2);
-  -webkit-animation: input-highlight 0.5s forwards;
-  animation: input-highlight 0.5s forwards;
+  background-image: linear-gradient(#856D4D, #856D4D), linear-gradient(#d2d2d2, #d2d2d2);
+  -webkit-animation: none;
+  animation: none;
   box-shadow: none;
-  background-size: 0 2px, 100% 1px; }
+  background-size: 0 2px, 100% 1px;
+  width: 100%; }
+
+.form-group.has-success .material-input:focus, .form-group.has-success .form-control:focus, .form-group.has-success .form-control.focus {
+  background-image: linear-gradient(#fff, #fff), linear-gradient(#d2d2d2, #d2d2d2);
+  box-shadow: none; }
+
+.form-group.has-success .control-label, .form-group.has-success input.form-control:focus ~ .floating-label {
+  color: #000; }
+
+blockquote {
+  border-left: 0; }
+
+[class^=mdi-left], [class*=mdi-left] {
+  float: left;
+  margin-right: 8px;
+  margin-top: -2px; }
+
+.mdi-maps-directions-bike {
+  margin-top: 3px; }
+
+.input-search {
+  float: right; }
+
+.btn {
+  color: #fff !important; }
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .input-search:focus {
+    width: 300px !important; } }
+
+@media screen and (min-width: 1200px) {
+  .input-search:focus {
+    width: 500px !important; } }
+
+.connexion {
+  margin: 0 auto;
+  text-align: center;
+  width: 50%;
+  margin-bottom: 40px; }
+  .connexion button {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px; }
+
+.snackbar {
+  background-color: #856D4D; }
+  .snackbar.error {
+    background-color: #bf360c; }
+
+@media screen and (max-width: 768px) {
+  #snackbar-container .snackbar {
+    margin: 0 !important;
+    border-radius: 0 !important; } }

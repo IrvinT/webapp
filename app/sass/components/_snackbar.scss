@@ -1,0 +1,14 @@
+.snackbar {
+	background-color: #856D4D;
+
+	&.error {
+		background-color: #bf360c;
+	}
+}
+
+@media screen and(max-width: 768px){
+	#snackbar-container .snackbar {
+		margin: 0 !important;
+		border-radius: 0 !important;
+	}
+}

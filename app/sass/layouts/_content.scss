@@ -10,15 +10,62 @@
 
 .navbar.navbar,
 .navbar-material-brown.navbar {
-  background-color: #856D4D;
+	background-color: #856D4D;
 }
 
 .form-control:focus,
 .form-control.focus {
-  outline: none;
-  background-image: linear-gradient(#54442F, #54442F), linear-gradient(#d2d2d2, #d2d2d2);
-  -webkit-animation: input-highlight 0.5s forwards;
-          animation: input-highlight 0.5s forwards;
+	outline: none;
+	background-image: linear-gradient(#856D4D, #856D4D), linear-gradient(#d2d2d2, #d2d2d2);
+	-webkit-animation: none;
+			animation: none;
+	box-shadow: none;
+	background-size: 0 2px, 100% 1px;
+	width: 100%;
+}
+
+.form-group.has-success .material-input:focus,
+.form-group.has-success .form-control:focus,
+.form-group.has-success .form-control.focus {
+  background-image: linear-gradient(#fff, #fff), linear-gradient(#d2d2d2, #d2d2d2);
   box-shadow: none;
-  background-size: 0 2px, 100% 1px;
+}
+
+.form-group.has-success .control-label,
+.form-group.has-success input.form-control:focus ~ .floating-label {
+  color: #000;
+}
+
+blockquote {
+ 	border-left: 0;
+}
+
+[class^=mdi-left], [class*=mdi-left]{
+	float: left;
+	margin-right: 8px;
+	margin-top: -2px;
+}
+
+.mdi-maps-directions-bike {
+	margin-top: 3px;
+}
+
+.input-search {
+	float: right;
+}
+
+.btn {
+	color: #fff !important;
+}
+
+@media screen and(min-width: 992px) and(max-width:1200px){
+	.input-search:focus {
+		width: 300px !important;
+	}
+}
+
+@media screen and(min-width: 1200px){
+	.input-search:focus {
+		width: 500px !important;
+	}
 }
