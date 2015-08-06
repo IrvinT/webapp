@@ -21,6 +21,7 @@ class Front {
 
         $this->render->view()->assign(array(
             'path' => _BASE_URI_,
+            'bower_uri' => _BOWER_URI_
         ));
     }
 

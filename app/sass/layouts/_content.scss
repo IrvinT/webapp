@@ -1,0 +1,23 @@
+body,
+.container {
+
+	.well {
+		box-shadow: 0 0px 0px 0 rgba(0,0,0,.2),0 0px 3px 0 rgba(0,0,0,.19);
+		height: 2000px;
+	}
+}
+
+.base-container {
+	padding-top: 100px;
+}
+
+.navbar {
+	position: fixed;
+	width: 100%;
+	z-index: 999;
+}
+
+.navbar.navbar,
+.navbar-material-brown.navbar {
+  background-color: #856D4D;
+}

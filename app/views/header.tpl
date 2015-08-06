@@ -18,3 +18,5 @@
         <![endif]-->
     </head>
     <body>
+
+    {include file='menu.tpl'}
