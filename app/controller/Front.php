@@ -101,7 +101,13 @@ class Front {
 
     public function addTask(){
         if($this->request->ajax){
-            $this->db->addTask($_POST['pseudo'], $_POST['task']);
+            echo $this->db->addTask($_POST['pseudo'], $_POST['task']);
+        }
+    }
+
+    public function removeTask(){
+        if($this->request->ajax){
+            $this->db->removeTask($_POST['id']);
         }
     }
 

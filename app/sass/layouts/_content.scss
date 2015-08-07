@@ -8,7 +8,7 @@
   margin-bottom: 30px;
 }
 
-#checkbox .sample2 .checkbox {
+#checkbox .sample .checkbox {
   float: left !important;
   margin-right: 10px !important;
   margin-top: -2px !important;
@@ -22,23 +22,23 @@
   color: #8bc34a;
 }
 
-#checkbox .sample2 {
+#checkbox .sample {
   width: 100%;
   clear: both;
   font-weight: 400;
 }
 
-#checkbox .sample2:nth-child(1n+3){
+#checkbox .sample:nth-child(1n+3){
   border-top: 1px solid rgb(225, 225, 225);
 }
 
-#checkbox .sample2 {
+#checkbox .sample {
   padding: 10px 0;
 }
-#checkbox .sample2 .text {
+#checkbox .sample .text {
   display: inline-block;
 }
-#checkbox .sample2 .checkbox {
+#checkbox .sample .checkbox {
   float: right;
   margin: 0;
 }

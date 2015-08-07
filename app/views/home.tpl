@@ -52,26 +52,25 @@
 					<div class="panel-body">
 						<div class="tasks-container" id="checkbox">
 							<div class="task-content" hidden>
-								<div class="sample2">
+								<div class="sample">
 									<div class="text"></div>
 									<div class="checkbox checkbox-material">
 										<label>
-											<input type="checkbox">
+											<input type="checkbox" class="checkbox-input">
 										</label>
 									</div>
 								</div>
 							</div>
 							{if isset($tasks) && !empty($tasks)}
 	                        	{foreach from=$tasks item=task}
-	                        		<div class="sample2">
+	                        		<div class="sample" id="{$task->id}">
 										<div class="text">{$task->task}</div>
 										<div class="checkbox checkbox-material">
 											<label>	
-												<input type="checkbox">
+												<input type="checkbox" class="checkbox-input">
 											</label>
 										</div>
 									</div>
-									<div class="list-group-separator"></div>
 								{/foreach}
 	                        {/if}
                         </div>

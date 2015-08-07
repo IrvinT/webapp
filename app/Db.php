@@ -30,6 +30,11 @@ class Db {
 		return $request->fetch(\PDO::FETCH_OBJ);
 	}
 
+	public function isTaskExist($id){
+		$request = $this->bdd->query("SELECT * FROM tasks WHERE id = '" . $id . "'");
+		return $request->fetch(\PDO::FETCH_OBJ);
+	}
+
 	public function addUser($pseudo){
 		$this->bdd->exec('INSERT INTO users(pseudo, date_add) VALUES('. $this->bdd->quote($pseudo) .', NOW())');
 	}
@@ -40,6 +45,16 @@ class Db {
 
 		if($user){
 			$this->bdd->exec('INSERT INTO tasks(id_user, task, date_add) VALUES('. $user->id .', '. $this->bdd->quote($task).', NOW())');
+			return $this->bdd->lastInsertId();
+		}
+	}
+
+	public function removeTask($id)
+	{
+		$task = $this->isTaskExist($id);
+
+		if($task){
+			$this->bdd->exec('DELETE FROM tasks WHERE id = ' . $task->id);
 		}
 	}
 

@@ -43,6 +43,11 @@ $app->route('/add-task', function(){
 	$c->addTask();
 });
 
+$app->route('/remove-task', function(){
+	$c = new Controller\Front();
+	$c->removeTask();
+});
+
 $app->map('notFound', function(){
     include '404.html';
 });
