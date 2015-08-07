@@ -4,6 +4,10 @@
 	&.error {
 		background-color: #bf360c;
 	}
+
+	&.confirmation {
+		background-color: #8bc34a;
+	}
 }
 
 @media screen and(max-width: 768px){

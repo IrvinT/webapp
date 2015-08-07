@@ -1,8 +1,9 @@
 <div class="container base-container">
 	<div class="row">
+		{if isset($session.pseudo)}
 		<div class="col-md-4">
 			<div class="bs-component">
-				<div class="panel panel-default">
+				<div class="panel panel-success">
 					<div class="panel-heading">Catégories</div>
 					<div class="panel-body">
 						<div class="list-group">
@@ -44,35 +45,82 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-md-8">
+		<div class="col-md-5">
 			<div class="bs-component">
 				<div class="panel panel-default">
+					<div class="panel-heading">Mes Tâches</div>
 					<div class="panel-body">
-						<blockquote>
-							<p>
-								Veuillez vous connecter pour accéder à votre liste de tâche à faire
-							</p>
-							<small>Le Bot</small>
-						</blockquote>
-						<div class="connexion">
-							<form action="accueil" method="post">
-								<div class="form-group has-success">
-		                            <label class="control-label" for="inputSuccess">Votre pseudo</label>
-		                            <input type="text" name="pseudo" class="form-control" id="inputSuccess">
-		                        </div>
-		                        <div class="form-group">
-	                                <button type="submit" name="connexion" class="btn btn-material-light-green">
-	                                	Connexion
-	                                </button>
-	                                <button type="submit" name="inscription" class="btn btn-material-deep-orange-900">
-	                                	Inscription
-	                                </button>
-		                        </div>
-	                        </form>
-						</div>
+						<div class="tasks-container" id="checkbox">
+							<div class="task-content" hidden>
+								<div class="sample2">
+									<div class="text"></div>
+									<div class="checkbox checkbox-material">
+										<label>
+											<input type="checkbox">
+										</label>
+									</div>
+								</div>
+							</div>
+							{if isset($tasks) && !empty($tasks)}
+	                        	{foreach from=$tasks item=task}
+	                        		<div class="sample2">
+										<div class="text">{$task->task}</div>
+										<div class="checkbox checkbox-material">
+											<label>	
+												<input type="checkbox">
+											</label>
+										</div>
+									</div>
+									<div class="list-group-separator"></div>
+								{/foreach}
+	                        {/if}
+                        </div>
 					</div>
 				</div>
 			</div>
 		</div>
+		<div class="col-md-3">
+			<div class="bs-component">
+				<div class="panel panel-default">
+					<div class="panel-heading">Ajouter une tâche</div>
+					<div class="panel-body">
+						<div class="form-group has-success">
+							<div class="row">
+								<div class="col-md-12">
+									<label class="control-label" for="inputSuccess">Description de ma tâche</label>
+	                            	<input type="text" maxlength="80" name="task-description" autocomplete="off" class="form-control" id="task-description">
+		                            <button type="submit" name="add-task" class="btn btn-material-light-green add-task">
+		                            	Ajouter
+		                            </button>
+								</div>
+                            </div>
+                        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		{/if}
+		{if !isset($session.pseudo)}
+		<div class="col-md-offset-4 col-md-offset-right-4 col-md-4">
+			<div class="bs-component">
+				<div class="connexion">
+					<form action="accueil" method="post">
+						<div class="form-group has-success">
+                            <label class="control-label" for="inputSuccess">Votre pseudo</label>
+                            <input type="text" name="pseudo" autocomplete="off" class="form-control" id="inputSuccess">
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" name="connexion" class="btn btn-material-light-green">
+                            	Connexion
+                            </button>
+                            <button type="submit" name="inscription" class="btn btn-material-deep-orange-900">
+                            	Inscription
+                            </button>
+                        </div>
+                    </form>
+				</div>
+			</div>
+		</div>
+		{/if}
 	</div>
 </div>

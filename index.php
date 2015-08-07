@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 error_reporting(-1);
 
 // Load Smarty library
@@ -21,6 +23,11 @@ $app->route('/accueil', function(){
 	$c->home();
 });
 
+$app->route('/deconnexion', function(){
+	$c = new Controller\Front();
+	$c->deconnexion();
+});
+
 $app->route('/ajouter-categories', function(){
 	$c = new Controller\Front();
 	$c->home();
@@ -29,6 +36,11 @@ $app->route('/ajouter-categories', function(){
 $app->route('/ajouter-souscategories', function(){
 	$c = new Controller\Front();
 	$c->home();
+});
+
+$app->route('/add-task', function(){
+	$c = new Controller\Front();
+	$c->addTask();
 });
 
 $app->map('notFound', function(){
